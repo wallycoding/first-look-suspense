@@ -1,0 +1,28 @@
+body {
+  background-color: #111;
+  color: #fff;
+}
+.loading {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+}
+@keyframes rotate-animation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading::before {
+  display: block;
+  width: 100px;
+  height: 100px;
+  content: '';
+  border: solid 5px transparent;
+  border-right-color: #fff;
+  border-radius: 100%;
+  animation: linear infinite 0.4s rotate-animation;
+}
